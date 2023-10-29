@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import "./style.scss"
+type Props= {
+  request:string
+}
 
-
-function MainComponent() {
+function MainComponent({request}:Props) {
   interface User {
     created:string,
 
@@ -28,7 +30,7 @@ url:string,
     results:User[],
     info:{}
   }
-  const url:string="https://rickandmortyapi.com/api/character";
+  const url:string=`https://rickandmortyapi.com/api/character/${request}`;
   const [data, setData]=useState<Result|null>(null)
     useEffect(()=>{
 fetch(url)
@@ -37,7 +39,7 @@ fetch(url)
   console.log(res)
   setData(res)
 })
-  }, [])
+  }, request)
   console.log(data)
   let list:HTMLElement[]=[]
  if(data){
