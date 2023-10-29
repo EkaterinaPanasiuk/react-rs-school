@@ -1,0 +1,39 @@
+*{
+margin: 0;
+padding: 0;
+}
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: stretch;
+    row-gap: 5em;
+}
+.item{
+    width: 25%;
+    min-width:300px ;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap:0.5em;
+    padding: 1em;
+}
+.title{
+    font-size: 2em;
+    text-transform: capitalize;
+    width: 100%;
+    text-align: left;
+
+}
+.subtitle{
+    font-size: 1.4em;
+    text-transform: capitalize;
+     width: 100%;
+    text-align: left;
+}
+.img{
+width:100%
+}
